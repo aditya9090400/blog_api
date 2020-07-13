@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include("blog_api.post.urls"), name="api"),
+    path('api-c/', include("blog_api.comments.urls"), name="api-c"),
 ]
 
 if settings.DEBUG:
