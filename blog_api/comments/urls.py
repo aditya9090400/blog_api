@@ -11,7 +11,7 @@ from .views import (
 
 urlpatterns = [
 	path("", CommentListAPIView.as_view(), name="list"),
-	path("<int:id>/", CommentDetailAPIView.as_view(), name="thread"),
+	path("<int:pk>/", CommentDetailAPIView.as_view(), name="thread"),
 
 	# path("create", PostCreateView.as_view(), name="post_create"),
 	# path("<str:slug>", PostDetailView.as_view(), name="post_detail"),

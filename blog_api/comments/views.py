@@ -9,7 +9,7 @@ from rest_framework.permissions import (IsAuthenticated,
 from rest_framework.filters import SearchFilter,OrderingFilter
 from blog_api.post.pagination import PostPageNumberPagination
 from blog_api.post.permissions import IsOwnerOrReadOnly
-from .serializers import CommentSerializer
+from .serializers import CommentSerializer, CommentChildSerializer, CommentDetailSerializer
 from comments.models import Comment
 # print(dir(permissions))
 
@@ -59,4 +59,4 @@ class CommentListAPIView(generics.ListAPIView):
 
 class CommentDetailAPIView(generics.RetrieveAPIView):
 	queryset = Comment.objects.all()
-	serializer_class = CommentSerializer
+	serializer_class = CommentDetailSerializer
